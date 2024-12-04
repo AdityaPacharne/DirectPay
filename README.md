@@ -43,8 +43,16 @@ npm install
 node modify.js 1000
 ```
 
+- Execute the server.js file
+```bash
+node server.js
+```
+
 - Open Google Messages Web, then right-click and select Inspect Element
 - Proceed to Console Section and paste the browser.js code there
+- And its Done.
+
+
 
 
 
