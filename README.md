@@ -18,3 +18,45 @@ DirectPay utilizes several key technologies to function:
 **Node.js**: The server-side framework used to handle requests and manage payment data.<br>
 **Express.js**: Web framework for building APIs and handling HTTP requests.<br>
 **JSON File Storage**: Payment details and status are stored in a local JSON file for simplicity and ease of use.<br>
+
+## Installation
+
+DirectPay requires Nodejs and Google Messages on your Mobile Phone and [Google Messages Web](https://messages.google.com/web/authentication) signed in.
+
+- Clone this repository
+```bash
+git clone https://github.com/AdityaPacharne/DirectPay.git
+```
+
+- Move inside the directory
+```bash
+cd DirectPay
+```
+
+- Install and Update Dependencies
+```bash
+npm install
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
