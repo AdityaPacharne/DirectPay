@@ -6,15 +6,15 @@ With DirectPay, users can easily track their payments by simply providing their 
 
 ## Features
 
-**Simple Payment Tracking**: Track payments by users' name, middle name, and surname.  
-**Real-Time Updates**: Payment status updates immediately upon registration.  
-**Customizable Data**: Users' name, middle name, and surname are stored for verification.  
-**Local Data Storage**: Payments are stored in a local JSON file (payments.json) for tracking.
+**Simple Payment Tracking**: Track payments by users' name, middle name, and surname.<br>  
+**Real-Time Updates**: Payment status updates immediately upon registration.<br>
+**Customizable Data**: Users' name, middle name, and surname are stored for verification.<br>
+**Local Data Storage**: Payments are stored in a local JSON file (payments.json) for tracking.<br>
 
 ## Tech Stack
 
 DirectPay utilizes several key technologies to function:
 
-**Node.js**: The server-side framework used to handle requests and manage payment data.
-**Express.js**: Web framework for building APIs and handling HTTP requests.
-**JSON File Storage**: Payment details and status are stored in a local JSON file for simplicity and ease of use.
+**Node.js**: The server-side framework used to handle requests and manage payment data.<br>
+**Express.js**: Web framework for building APIs and handling HTTP requests.<br>
+**JSON File Storage**: Payment details and status are stored in a local JSON file for simplicity and ease of use.<br>
