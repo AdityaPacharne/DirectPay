@@ -56,8 +56,14 @@ node server.js
 
 https://github.com/user-attachments/assets/dbb65c8e-34a2-4e9c-b29e-12827cd1ad2b
 
-# Point-of-View of 2 different users
+## Point-of-View of 2 different users
 
+https://github.com/user-attachments/assets/dba88103-2556-4bfd-8cc8-187a6792cf31
+
+This method was able to provide Authentication/Verification by first verifying that a payment was made
+And only giving 'Payment Received' message to the one who paid.
+
+## Working
 
 
 
