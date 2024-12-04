@@ -14,7 +14,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Endpoint to receive user data and save it in payments.json
 app.post('/data', (req, res) => {
     const { name, middleName, surname } = req.body;
     const newEntry = { name, middleName, surname };
@@ -42,7 +41,6 @@ app.post('/data', (req, res) => {
     });
 });
 
-// Endpoint to retrieve payment data
 app.get('/payments', (req, res) => {
     fs.readFile('payments.json', 'utf8', (err, data) => {
         if (err) {
