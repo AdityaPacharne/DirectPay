@@ -38,6 +38,19 @@ cd DirectPay
 npm install
 ```
 
+- Enter the desired amount in place of 1000
+```bash
+node modify.js 1000
+```
+
+- Open Google Messages Web, then right-click and select Inspect Element
+- Proceed to Console Section and paste the browser.js code there
+
+
+
+
+
+
 
 
 
