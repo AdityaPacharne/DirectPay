@@ -6,7 +6,7 @@ With DirectPay, users can easily track their payments by simply providing their 
 
 ## Features
 
-**Simple Payment Tracking**: Track payments by users' name, middle name, and surname.<br>  
+**Simple Payment Tracking**: Track payments by users' name, middle name, and surname.  
 **Real-Time Updates**: Payment status updates immediately upon registration.<br>
 **Customizable Data**: Users' name, middle name, and surname are stored for verification.<br>
 **Local Data Storage**: Payments are stored in a local JSON file (payments.json) for tracking.<br>
