@@ -38,6 +38,16 @@ cd DirectPay
 npm install
 ```
 
+- Enter the desired amount in place of X
+```bash
+node modify.js X
+```
+Example:
+```bash
+node modify.js 1000
+```
+
+
 
 
 
