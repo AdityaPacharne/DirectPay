@@ -65,7 +65,26 @@ And only giving 'Payment Received' message to the one who paid.
 
 ## Working
 
+**User Details Submission**
+The user begins by entering their details, including their email, name, middle name, and surname, on the provided form in the DirectPay system. These details are temporarily stored for tracking purposes.
 
+**Payment Webpage**
+After submitting their information, the user is redirected to a payment page displaying a static QR code for Google Pay (UPI). The user can scan this code to complete the payment.
+
+**Payment SMS Parsing**
+When the payment is successfully processed, the bank sends a confirmation SMS to the client. This SMS contains details about the credited amount, the payer’s account information, and the name of the payer.
+
+**Extracting Payment Details**
+The system extracts the name, middle name, and surname of the payer from the bank-generated SMS using a JavaScript function. This function dynamically parses the SMS content to identify the relevant details.
+
+**Sending Payment Data**
+Once the details are extracted, a JSON object containing the name, middle name, and surname is sent to a Node.js server via a POST request. The server appends this data to a local payments.json file, which acts as a record of completed payments.
+
+**Real-Time Status Tracking**
+The script running on the payment webpage continuously checks the payments.json file for a match between the user-provided details (submitted in the form) and the data recorded in payments.json.
+When a match is found, the payment status on the webpage updates to "Payment Received."
+If no match is found, the system continues monitoring until the payment is confirmed.
+This seamless workflow ensures a streamlined payment tracking process without relying on external payment gateways or intermediaries, providing users with a transparent and efficient solution.
 
 
 
