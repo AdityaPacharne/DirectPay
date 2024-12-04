@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment Status</title>
+    </head>
+    <body>
+        <h1>Scan QR to Pay</h1>
+        <img src="qrcode.jpeg" alt="QR Code for Payment" width="250" height="250" />
+        <p>Please do not reload this page.</p>
+        <h2 id="payment-status">Awaiting Payment...</h2>
+
+        <script>
+            function checkPaymentStatus() {
+                fetch("http://localhost:3000/payments")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Retrieve and parse user data from session storage
+                        const userData = JSON.parse(
+                            sessionStorage.getItem("userData"),
+                        );
+
+                        if (!userData) {
+                            console.error(
+                                "User data not found in session storage",
+                            );
+                            return;
+                        }
+
+                        const { name, middleName, surname } = userData;
+
+                        // Debugging: Log data from session storage and payments.json
+                        console.log(
+                            "User data from session storage:",
+                            userData,
+                        );
+                        console.log("Data from payments.json:", data);
+
+                        // Check if payment is received by matching name details in uppercase
+                        const isPaymentReceived = data.some(
+                            (entry) =>
+                                entry.name === name &&
+                                entry.middleName === middleName &&
+                                entry.surname === surname,
+                        );
+
+                        // Update the payment status on the webpage
+                        const statusElement =
+                            document.getElementById("payment-status");
+                        statusElement.innerText = isPaymentReceived
+                            ? "Payment Received!"
+                            : "Awaiting Payment...";
+                    })
+                    .catch((error) =>
+                        console.error("Error checking payment status:", error),
+                    );
+            }
+
+            // Poll every 2 seconds to check payment status
+            setInterval(checkPaymentStatus, 2000);
+        </script>
+    </body>
+</html>
